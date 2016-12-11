@@ -6,7 +6,7 @@
   "keywords": [
       "autosave", "auto-save", "save", "delay", "debounce", "auto", "automatic", "refresh", "onDichange", "onDidStopChanging", "unicorn", "isthatcentered"
   ],
-  "repository": "https://github.com/atom/autosave-delay",
+  "repository": "https://github.com/isthatcentered/atom-autosave-onchange",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
