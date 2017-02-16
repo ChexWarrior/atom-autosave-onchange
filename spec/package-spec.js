@@ -7,11 +7,11 @@ describe('In the file package.js', () => {
 
     let editor,
         workspace,
-        package;
+        pack;
 
     beforeEach(() => {
 
-        package = new Package();
+        pack = new Package();
         workspace = jasmine.createSpyObj('workspace', ['querySelector']);
         editor = jasmine.createSpyObj('editor', ['save', 'isModified', 'getPath']);
     });
@@ -29,7 +29,7 @@ describe('In the file package.js', () => {
 
         it('Should call the save method', () => {
 
-            package.trigger(editor); // Triggering spy
+            pack.trigger(editor); // Triggering spy
 
             expect( editor.save ).toHaveBeenCalled();
         });
@@ -41,14 +41,14 @@ describe('In the file package.js', () => {
 
             editor.isModified.andReturn(false); // Setting value returned by isModified()
 
-            expect( package._shouldSave(editor) ).toBe( false );
+            expect( pack._shouldSave(editor) ).toBe( false );
         });
 
         it("Should return false if 'getPath()' is undefined", () => {
 
             editor.getPath.andReturn(undefined); // Setting value returned by isModified()
 
-            expect( package._shouldSave(editor) ).toBe( false );
+            expect( pack._shouldSave(editor) ).toBe( false );
         });
 
         it("Should return true if both are true/defined", () => {
@@ -56,7 +56,7 @@ describe('In the file package.js', () => {
             editor.isModified.andReturn(true); // Setting value returned by isModified()
             editor.getPath.andReturn('path/whatevz.js'); // Setting value returned by isModified()
 
-            expect( package._shouldSave(editor) ).toBe( true );
+            expect( pack._shouldSave(editor) ).toBe( true );
         });
     });
 
@@ -64,7 +64,7 @@ describe('In the file package.js', () => {
 
         it("Should call the workspace's querySelector method", () => {
 
-            package._autocompleteTriggered( workspace ); // Triggering spy
+            pack._autocompleteTriggered( workspace ); // Triggering spy
 
             expect( workspace.querySelector ).toHaveBeenCalled();
         });
@@ -73,14 +73,14 @@ describe('In the file package.js', () => {
 
             workspace.querySelector.andReturn(undefined);
 
-            expect( package._autocompleteTriggered( workspace ) ).toBe( false );
+            expect( pack._autocompleteTriggered( workspace ) ).toBe( false );
         });
 
         it("Should return true if '.autocomplete-plus' class is found", () => {
 
             workspace.querySelector.andReturn(true);
 
-            expect( package._autocompleteTriggered( workspace ) ).toBe( true );
+            expect( pack._autocompleteTriggered( workspace ) ).toBe( true );
         });
     });
 });
