@@ -1,6 +1,6 @@
 {
-  "name": "autosave-onchange-plus",
-  "main": "./lib/autosave-onchange-plus",
+  "name": "autosave-onchange",
+  "main": "./lib/autosave-onchange",
   "version": "1.2.0",
   "description": "This plugin automatically saves a file after a change is made to it.  This package is the a fork of isthatcentered's unmaintained plugin autosave-onchange",
   "keywords": [
@@ -17,7 +17,7 @@
     "unicorn",
     "isthatcentered"
   ],
-  "repository": "https://github.com/ChexWarrior/atom-autosave-onchange-plus",
+  "repository": "https://github.com/ChexWarrior/atom-autosave-onchange",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

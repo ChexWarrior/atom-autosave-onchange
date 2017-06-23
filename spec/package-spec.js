@@ -91,32 +91,32 @@ xdescribe('AutosaveDelay', () => {
 
     beforeEach(() => {
         workspaceElement = atom.views.getView(atom.workspace);
-        activationPromise = atom.packages.activatePackage('autosave-onchange-plus');
+        activationPromise = atom.packages.activatePackage('autosave-onchange');
     });
 
-    describe('when the autosave-onchange-plus:toggle event is triggered', () => {
+    describe('when the autosave-onchange:toggle event is triggered', () => {
         it('hides and shows the modal panel', () => {
             // Before the activation event the view is not on the DOM, and no panel
             // has been created
-            expect(workspaceElement.querySelector('.autosave-onchange-plus')).not.toExist();
+            expect(workspaceElement.querySelector('.autosave-onchange')).not.toExist();
 
             // This is an activation event, triggering it will cause the package to be
             // activated.
-            atom.commands.dispatch(workspaceElement, 'autosave-onchange-plus:toggle');
+            atom.commands.dispatch(workspaceElement, 'autosave-onchange:toggle');
 
             waitsForPromise(() => {
                 return activationPromise;
             });
 
             runs(() => {
-                expect(workspaceElement.querySelector('.autosave-onchange-plus')).toExist();
+                expect(workspaceElement.querySelector('.autosave-onchange')).toExist();
 
-                let autosaveDelayElement = workspaceElement.querySelector('.autosave-onchange-plus');
+                let autosaveDelayElement = workspaceElement.querySelector('.autosave-onchange');
                 expect(autosaveDelayElement).toExist();
 
                 let autosaveDelayPanel = atom.workspace.panelForItem(autosaveDelayElement);
                 expect(autosaveDelayPanel.isVisible()).toBe(true);
-                atom.commands.dispatch(workspaceElement, 'autosave-onchange-plus:toggle');
+                atom.commands.dispatch(workspaceElement, 'autosave-onchange:toggle');
                 expect(autosaveDelayPanel.isVisible()).toBe(false);
             });
         });
@@ -130,11 +130,11 @@ xdescribe('AutosaveDelay', () => {
             // workspaceElement to the DOM are generally slower than those off DOM.
             jasmine.attachToDOM(workspaceElement);
 
-            expect(workspaceElement.querySelector('.autosave-onchange-plus')).not.toExist();
+            expect(workspaceElement.querySelector('.autosave-onchange')).not.toExist();
 
             // This is an activation event, triggering it causes the package to be
             // activated.
-            atom.commands.dispatch(workspaceElement, 'autosave-onchange-plus:toggle');
+            atom.commands.dispatch(workspaceElement, 'autosave-onchange:toggle');
 
             waitsForPromise(() => {
                 return activationPromise;
@@ -142,9 +142,9 @@ xdescribe('AutosaveDelay', () => {
 
             runs(() => {
                 // Now we can test for view visibility
-                let autosaveDelayElement = workspaceElement.querySelector('.autosave-onchange-plus');
+                let autosaveDelayElement = workspaceElement.querySelector('.autosave-onchange');
                 expect(autosaveDelayElement).toBeVisible();
-                atom.commands.dispatch(workspaceElement, 'autosave-onchange-plus:toggle');
+                atom.commands.dispatch(workspaceElement, 'autosave-onchange:toggle');
                 expect(autosaveDelayElement).not.toBeVisible();
             });
         });

@@ -10,7 +10,7 @@ const gulp = require('gulp'),
 
 gulp.task('test', () => {
 
-    gulp.src("spec/autosave-onchange-plus-spec.js", { buffer: false })
+    gulp.src("spec/autosave-onchange-spec.js", { buffer: false })
         // Handling errors sent by tests that would close watch command
         .pipe(plumber())
         // Defining command to be ran
@@ -18,7 +18,7 @@ gulp.task('test', () => {
             cmd: "atom",
             args: [
                 "--test",
-                "spec/autosave-onchange-plus-spec.js"
+                "spec/autosave-onchange-spec.js"
             ],
         }));
 });
