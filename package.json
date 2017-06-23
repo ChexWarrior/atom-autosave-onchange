@@ -1,8 +1,8 @@
 {
-  "name": "autosave-onchange",
-  "main": "./lib/autosave-delay",
+  "name": "autosave-onchange-plus",
+  "main": "./lib/autosave-onchange-plus",
   "version": "1.1.0",
-  "description": "You'll be surprized at how much hitting ctrl+s every ten seconds was annoying when you won't have to do it anymore :). This package automatically saves your code for you after you make changes to your code, proudly saving fingers one save at a time !",
+  "description": "This plugin automatically saves a file after a change is made to it.  This package is the a fork of isthatcentered's unmaintained plugin autosave-onchange",
   "keywords": [
     "autosave",
     "auto-save",
@@ -17,7 +17,7 @@
     "unicorn",
     "isthatcentered"
   ],
-  "repository": "https://github.com/isthatcentered/atom-autosave-onchange",
+  "repository": "https://github.com/ChexWarrior/atom-autosave-onchange-plus",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

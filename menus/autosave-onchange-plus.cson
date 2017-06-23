@@ -6,7 +6,7 @@
       'submenu': [
         {
           'label': 'Toggle'
-          'command': 'autosave-delay:toggle'
+          'command': 'autosave-onchange-plus:toggle'
         }
       ]
     ]
