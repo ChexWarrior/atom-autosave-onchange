@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-s": "autosave-delay:toggle"
+    "shift-s": "autosave-delay:toggle"
   }
 }
