@@ -1,7 +1,7 @@
 {
   "name": "autosave-onchange-plus",
   "main": "./lib/autosave-onchange-plus",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This plugin automatically saves a file after a change is made to it.  This package is the a fork of isthatcentered's unmaintained plugin autosave-onchange",
   "keywords": [
     "autosave",
