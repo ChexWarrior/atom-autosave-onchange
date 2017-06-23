@@ -1,8 +1,8 @@
 'use babel';
 
-import AutosaveDelay from '../lib/autosave-onchange-plus';
+import AutosaveDelay from '../lib/autosave-delay';
 
-describe('In the file autosave-onchange-plus.js', () => {
+describe('In the file autosave-delay.js', () => {
 
     let editor,
         workspace,
@@ -21,7 +21,7 @@ describe('In the file autosave-onchange-plus.js', () => {
             workspace = atom.views.getView(atom.workspace);
 
             // Activate package
-            waitsForPromise(() => atom.packages.activatePackage('autosave-onchange-plus') );
+            waitsForPromise(() => atom.packages.activatePackage('autosave-delay') );
 
             // console.log(editor);
             // // waitsForPromise(() => {
@@ -37,17 +37,17 @@ describe('In the file autosave-onchange-plus.js', () => {
             // waitsForPromise(() => editor.getBuffer().emitter.emit('did-change-cursor-position') );
             //
 
-            // waitsForPromise(() => atom.packages.activatePackage('autosave-onchange-plus') );
+            // waitsForPromise(() => atom.packages.activatePackage('autosave-delay') );
 
             // Trigger onDidStopChanging, which is the first event triggerring plugin
 
-            // console.log(atom.packages.activatePackage('autosave-onchange-plus'));
+            // console.log(atom.packages.activatePackage('autosave-delay'));
         });
         describe("Testing requirements", () => {
 
             it("Editor should be defined", () => expect( editor ).toBeDefined() );
 
-            it('The package should be activated', () => expect( atom.packages.getActivePackage('autosave-onchange-plus') ).toBeDefined() );
+            it('The package should be activated', () => expect( atom.packages.getActivePackage('autosave-delay') ).toBeDefined() );
         });
 
         /**
