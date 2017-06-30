@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "shift-s": "autosave-onchange:toggle"
+    "ctrl-alt-o": "autosave-onchange:toggle"
   }
 }
