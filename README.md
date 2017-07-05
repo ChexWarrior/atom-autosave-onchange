@@ -8,6 +8,7 @@ This is a plugin for the [Atom editor](https://atom.io/) which automatically sav
 ## Features
 * Configurable auto-save delay
 * Easily disable and enable auto-save functionality
+* Autosave automatically disables when the commit screen loads for Git Plus (Git Plus automatically commits on save so using both packages can be annoying). This is configurable within the package settings.
 
 ## Special Thanks
 * Thanks to [isthatcentered](https://github.com/isthatcentered/) for starting the package!
